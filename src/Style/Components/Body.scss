@@ -1,0 +1,20 @@
+@import 'Mixins.scss';
+
+$AppBgColor : rgb(196, 196, 255);
+$bodyBgColor : red;
+$AppFont : Arial, Helvetica, sans-serif;
+$AppFontSize : 10px;
+
+html {
+    font-size: $AppFontSize;
+}
+
+.root {
+    background-color: $AppBgColor;
+    font-family: $AppFont;
+    color: black;
+    display: flex;
+    @include flex(column, center, flex-start);
+    height: 100vh;
+    width: 100vw;
+}

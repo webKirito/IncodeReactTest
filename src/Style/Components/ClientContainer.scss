@@ -1,0 +1,9 @@
+@import 'Mixins.scss';
+
+$ClientInfoBgColor: white;
+
+.clientInfo {
+    height: 100vh;
+    width: 80vw;
+    background-color: $ClientInfoBgColor;
+}
