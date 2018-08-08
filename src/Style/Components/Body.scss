@@ -14,7 +14,7 @@ html {
     font-family: $AppFont;
     color: black;
     display: flex;
-    @include flex(column, center, flex-start);
+    @include flex(row, center, flex-start);
     height: 100vh;
     width: 100vw;
 }

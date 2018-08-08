@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import SearchClientInput from './SearchClientInput';
 
 
-const Client = (name, key, onClick) => {
+const Client = (name, key, photoUrl, onClick) => {
     
     return (
-        <div key = {key} onClick = {() => onClick(name)} className="clientItem">
+        <div key = {key} className='clientItem' onClick = {() => onClick(name)} className="clientItem">
+            <div className="img">
+                <img src={`${photoUrl}`} alt=""/>
+            </div> 
             <div>{name}</div>
         </div>  
     );
@@ -45,7 +48,7 @@ export default class ClientList extends Component {
             <div className="clientList">
                 <SearchClientInput onChange = {this.onChange}/>
                 {
-                    this.state.clients.map(({general}, index) => { return Client(`${general.firstName} ${general.lastName}`, index, this.onClick)})
+                    this.state.clients.map(({general}, index) => { return Client(`${general.firstName} ${general.lastName}`, index, general.avatar, this.onClick)})
                 }
             </div>
         )
