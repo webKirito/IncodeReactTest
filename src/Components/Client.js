@@ -35,7 +35,15 @@ export default class Client extends Component {
             )
         } else {
             // console.log('Person with info was rendered', this.info)
-            return '';
+            return (
+                <div className="wrap">
+                        <div className="onPageReady">
+                        <h1>
+                            Choose client to get more info.
+                        </h1>
+                    </div>
+                </div>
+            )
         }
     }
 

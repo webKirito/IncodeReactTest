@@ -64,3 +64,28 @@ $SeparetorColor : #D3D3D3;
 .wrapper {
     @include flex(row, center, center);
 }
+
+.wrap {
+    height: 100vh;
+    width: 80vw;
+    background-color: $ClientInfoBgColor;
+    @include flex(row, center, center);
+}
+
+.onPageReady {
+    background-color: $CardBgColor;
+    @include flex(row, center,center);
+    height: 80%;
+    width: 80%;
+    box-shadow: $CardShadow;
+    h1 {
+        background-color: white;
+        padding: 10px;
+        font-size: 3rem;
+        color: #111;
+        margin: 10px;  
+        font-weight: 300; 
+        line-height: 32px; 
+        text-align: center;
+    } 
+}
