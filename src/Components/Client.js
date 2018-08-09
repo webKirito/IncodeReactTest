@@ -11,8 +11,8 @@ export default class Client extends Component {
             console.log('Person with info was rendered', this.info)
             return(
                 <div className = 'clientInfo'>
-                    <div className="card">
-                    <h1>Photo</h1>
+                    <div className="photoCard">
+                        <h1 className="rotated">Photo</h1>
                         <img src={`${this.props.info.general.avatar}`} alt=""/>
                     </div>
                     <div className="card">

@@ -1,12 +1,16 @@
 @import 'Mixins.scss';
 
-$AppBgColor : rgb(196, 196, 255);
-$bodyBgColor : red;
+$AppBgColor : rgb(255, 255, 255);
 $AppFont : Arial, Helvetica, sans-serif;
 $AppFontSize : 10px;
 
 html {
     font-size: $AppFontSize;
+    height: 100vh;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 .root {
@@ -14,7 +18,7 @@ html {
     font-family: $AppFont;
     color: black;
     display: flex;
-    @include flex(row, center, flex-start);
+    @include flex(row, flex-start, flex-start);
     height: 100vh;
     width: 100vw;
 }

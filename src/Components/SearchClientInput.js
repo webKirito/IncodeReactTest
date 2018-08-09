@@ -8,7 +8,7 @@ export default class SearchClientInput extends Component {
     render() {
         return(
             <div className="searchComponent">
-                <input type="text" dafaultValue='' ref='clientName' onChange={() => this.props.onChange(this.refs.clientName.value)} />
+                <input type="text" placeholder="Search for client:" dafaultValue='' ref='clientName' onChange={() => this.props.onChange(this.refs.clientName.value)} />
             </div>
         )
     }

@@ -1,27 +1,73 @@
 @import 'Mixins.scss';
-$ClientListBgColor: red;
+$ClientListBgColor: white;
+$ClientItemBgColor: #DCDCDC;
+$SeparetorColor : #D3D3D3;
 
 
 .clientList {
     background-color: $ClientListBgColor;
-    height: 100vh;
+    height: 100%;
     width: 20vw;
-    @include flex(column,center,flex-start);
-    overflow: scroll;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    overflow-y: auto;
+    .searchComponent {
+        width: 100%;
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
     .clientItem {
-        @include flex(column,center,center);
-        height: 200px;
-        margin-bottom: 10px;
+        min-height: 150px;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-around;
+        width: 100%;
+        background-color:$ClientItemBgColor;
+        border-bottom: 2px solid $SeparetorColor;
     }
 }
 
 .clientItem {
     .img {
-        height: 100px;
+        min-height: 100px;
         width: 100px;
         img {
             height: 100%;
             width: 100%;
+            @include borderRadius(50%);
         }
     }
+    div {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.searchComponent {
+    input {
+        outline: none;
+        font-size: 2rem;
+        width: 90%;
+        height: 4rem;
+        border: none;
+    }
+}
+
+.clientChoosen {
+    background-color: white !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.attention div {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
 }

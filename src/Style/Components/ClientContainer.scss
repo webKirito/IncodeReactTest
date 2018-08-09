@@ -1,9 +1,10 @@
 @import 'Mixins.scss';
 
 $ClientInfoBgColor: white;
-$CardBgColor: grey;
-$CardShadow: red;
+$CardBgColor: #DCDCDC;
+$CardShadow: 10px 10px 26px -4px rgba(0,0,0,0.62);
 $CardSide : 15vw;
+$SeparetorColor : #D3D3D3;
 
 .clientInfo {
     height: 100vh;
@@ -13,33 +14,53 @@ $CardSide : 15vw;
     flex-wrap: wrap;
 }
 
-
-
-.card {
-    @include flex(column, flex-start, space-around);
+.photoCard {
+    @include flex(row, center, space-around);
     background-color: $CardBgColor;
     height: $CardSide * 1.3 ;
     width: $CardSide * 2 ;
     margin: 20px 20px;
-    @include borderRadius(20px);
+    padding: 10px;
+    box-shadow: $CardShadow;
     img {
         align-self: center;
-        margin-bottom: 45px;
+        height: 90%;
+        border: 2px solid $SeparetorColor;
     }
     h1 {
         font-size: 3rem;
-        color: #111;  
+        color: #111;
+        margin-top: 20px;   
+    }
+    .rotated {  
+        transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+    }
+} 
+
+.card {
+    @include flex(column, flex-start, flex-start);
+    background-color: $CardBgColor;
+    height: $CardSide * 1.3 ;
+    width: $CardSide * 2 ;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: $CardShadow;
+    h1 {
+        font-size: 3rem;
+        color: #111;
+        margin: 10px;  
         font-weight: 300; 
         line-height: 32px; 
         text-align: center;
-        margin: 10px 20px;
     } 
     div {
         padding: 20px;
-        margin-left: 20px;
-        margin-bottom: 20px;
+        margin: 5px;
         background-color: white;
-        @include borderRadius(20px);
         font-size: 1.5rem;
     }
+}
+
+.wrapper {
+    @include flex(row, center, center);
 }
